@@ -20,10 +20,11 @@ public class ThreadTest4 {
     public static void main(String[] args) {
 
         ThreadTest4 tt4 = new ThreadTest4();
-
+        final int x = 10;
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
+                System.out.println(x);
                 tt4.printer();
             }
         });
